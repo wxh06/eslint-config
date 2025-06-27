@@ -1,0 +1,42 @@
+{
+  "name": "@wangxinhe/eslint-config",
+  "version": "0.1.0",
+  "repository": "github:wxh06/eslint-config",
+  "author": {
+    "name": "Wang Xinhe",
+    "email": "wangxinhe06@gmail.com",
+    "url": "https://wxh.im/"
+  },
+  "license": "Unlicense",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    "./base": {
+      "types": "./index.d.ts",
+      "default": "./base.js"
+    },
+    "./react": {
+      "types": "./index.d.ts",
+      "default": "./react.js"
+    },
+    "./next": {
+      "types": "./index.d.ts",
+      "default": "./next.js"
+    }
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@next/eslint-plugin-next": "^15.3.4",
+    "eslint": ">= 9",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^8.34.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
