@@ -1,6 +1,8 @@
 // @ts-check
 
 import eslint from "@eslint/js";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import { importX } from "eslint-plugin-import-x";
 import tseslint from "typescript-eslint";
 
 /**
@@ -21,6 +23,15 @@ export const config = (dirname) =>
       },
       rules: {
         "@typescript-eslint/consistent-type-imports": "error",
+      },
+    },
+    importX.flatConfigs.recommended,
+    importX.flatConfigs.typescript,
+    {
+      settings: {
+        "import-x/resolver-next": [
+          createTypeScriptImportResolver({ project: dirname }),
+        ],
       },
     },
     {
