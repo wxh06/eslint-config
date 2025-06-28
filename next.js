@@ -1,11 +1,10 @@
 import pluginNext from "@next/eslint-plugin-next";
-
 import { config as reactConfig } from "./react.js";
 
 /**
  * @param {string} dirname
  * @return {import("eslint").Linter.Config[]}
- * */
+ */
 export const config = (dirname) => [
   ...reactConfig(dirname),
   { ignores: ["**/.next/"] },
